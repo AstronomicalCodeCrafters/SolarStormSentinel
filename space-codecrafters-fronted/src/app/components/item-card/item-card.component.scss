@@ -1,0 +1,36 @@
+.text-line {
+  text-decoration: line-through;
+}
+
+.card-text-thin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-icon {
+  color: var(--white-color);
+}
+
+.card-btn {
+  width: 100%;
+}
+
+.card-img {
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pointer {
+  cursor: "pointer";
+}
+
+@media (min-width: 700px) {
+  .card {
+    width: 250px;
+  }
+}

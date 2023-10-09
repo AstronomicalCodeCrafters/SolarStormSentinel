@@ -1,0 +1,66 @@
+.container {
+    height: 100vh;
+    background-image: url('/assets/images/space-starts.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.div-back {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+
+
+h1 {
+    color: white;
+}
+
+.title-container {
+    text-align: center;
+    margin-top: 9vh;
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.btn-container{
+    position: absolute;
+    bottom: 2vh
+}
+
+.btn-solar {
+    background-color: darkorange;
+    color: white;
+    border-color: darkorange;
+    font-size: 2rem !important;
+    width: 97%;
+}
+
+.badge-alert {
+    font-size: 1.3rem;
+}
+
+.image-sun-container {
+    
+    .image-sun {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.card {
+    font-weight: 500;
+    color: white;
+    font-size: 2rem;
+    background-color: #0b111936 !important;
+}
+
+.card, .card .list-group .list-group-item {
+    font-weight: 500;
+    color: white;
+    font-size: 2rem;
+    background-color: #0b111936;
+}

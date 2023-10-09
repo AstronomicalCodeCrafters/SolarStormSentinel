@@ -1,0 +1,16 @@
+<nav class="navbar sticky-top navbar-light bg-light" [ngClass]="{'navbar-without-banner': !messageExist}">
+  <div class="container-fluid">
+    <a class="navbar-brand menu-width">
+      <app-sidenav [visible]="showSidenav" [messageExist]="messageExist" [sections]="sections"
+        (change)="showSidenav = !showSidenav"></app-sidenav>
+      <div class="menu-option" *ngIf="showSidenav" (click)="menuActive()">
+        <fa-icon class="icon" icon="xmark"></fa-icon>
+        <label class="font-body-1" [class]="{'font-weight': menu}"> Cerrar</label>
+      </div>
+
+      <div class="menu-option" *ngIf="!showSidenav" (click)="menuActive()">
+        <fa-icon class="icon" icon="bars"></fa-icon>
+      </div>
+    </a>
+  </div>
+</nav>

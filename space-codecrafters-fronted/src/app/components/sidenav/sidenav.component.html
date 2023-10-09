@@ -1,0 +1,21 @@
+<div class="sidenav" [ngClass]="{'sidenav-width': visible, 'sidenav-without-banner': !messageExist}">
+  <div *ngFor="let section of sections" class="side-nav-section">
+    <h4 class="color-brownDark"> {{section.name}}</h4>
+    <div *ngFor="let option  of section.options; index as i; ">
+      <label *ngIf="!option.items" class="font-sub-title-1 color-blackDark" [routerLink]="option.component"
+        (click)="onChange()"> {{option.name}} </label>
+
+      <mdb-accordion *ngIf="option.items?.length>0">
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader>
+            <label class="font-sub-title-1 color-blackDark"> {{option.name}} </label>
+          </ng-template>
+          <ng-template mdbAccordionItemBody class="option-items">
+            <label class="font-sub-title-1 font-weight" *ngFor="let item of option.items"
+              [routerLink]="['categoria',item.sectionId,'producto',item.id]" (click)="onChange()"> {{item.name}}</label>
+          </ng-template>
+        </mdb-accordion-item>
+      </mdb-accordion>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-12">
+            <img src="assets/images/sections/tormenta-geomagnetica.gif" alt="">
+        </div> -->
+        <div class="col-12 title-container">
+            <h1>Geomagnetic Storms</h1>
+        </div>
+
+        <div class="col-12 image-sun-container">
+            <img class="image-sun" src="assets/images/sections/sun.png">
+        </div>
+
+        <span class="badge bg-Info badge-kp">Actual K<sub>P</sub>: <strong>{{kpIndicator}}</strong></span>
+
+        <!-- <div class="col-12">
+            <span class="badge bg-primary badge-alert ">Sin Tormenta Geomágneticas</span>
+        </div> -->
+
+        <div class="col-12 div-info px-4">
+            <h4 class="mt-3 question-one" (click)="question1 = !question1">What are geomagnetic storms? ></h4>
+            <p class="mt-3" [class.display-text]="question1">Geomagnetic storms on Earth are a menace to many modern technologies, particularly GPS satellite systems and electrical power grids. These storms occur when strong gusts of wind or storms from the Sun traverse interplanetary space and reach Earth, deforming Earth's magnetic field and showering particles into Earth's magnetic poles. These storms are notoriously difficult to predict. Even when solar flares and eruptions are observed that may cause a geomagnetic storm, the travel time for material to reach Earth could be anywhere from about two to four days (or it could miss Earth entirely).</p>
+
+            <h4 class="mt-3" (click)="question2 = !question2">How is the strength of a geomagnetic storm measured? ></h4>
+            <p class="mt-3" [class.display-text]="question2">The National Oceanic and Atmospheric Administration (NOAA) uses measurements of the solar wind density, temperature, speed, and magnetic field to run computer simulations of the Earth's magnetic field and atmosphere. Based on those simulations, NOAA forecasts when a geomagnetic storm will occur and how strong it will be. The strength of the geomagnetic storm is measured on a scale called the Planetary K-index (Kp).</p>
+            
+            <h4 class="mt-3" (click)="question3 = !question3">What is The Planetary K-index? ></h4>
+            <p class="mt-3" [class.display-text]="question3">The Kp-index is the global geomagnetic activity index that is based on 3-hour measurements from ground-based magnetometers around the world. Each station is calibrated according to its latitude and reports a certain K-indice depending on the geomagnetic activity measured at the location of the magnetometer.</p>
+            
+            <p class="mt-3" [class.display-text]="question3">The global Kp-index is then determined with an algorithm that puts the reported K-values of every station together. The Kp-index ranges from 0 to 9 where a value of 0 means that there is very little geomagnetic activity and a value of 9 means extreme geomagnetic storming.</p>
+
+        </div>
+        
+        <div class="col-12 btn-container text-center">
+            <div routerLink="/dates" class="btn btn-primary w-100 btn-solar py-3 h-auto">
+                Predict Storms
+            </div>
+        </div>
+    </div>
+</div>

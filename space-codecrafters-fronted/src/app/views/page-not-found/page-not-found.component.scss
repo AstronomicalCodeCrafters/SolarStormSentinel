@@ -1,0 +1,47 @@
+.main-container {
+  background-color: #d4b984;
+}
+
+.bg-img {
+  padding: 0rem 2rem;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../../../assets/images/page-error.png');
+}
+
+.btn-container {
+  width: 100%;
+  position: relative;
+  background-color: var(--white-color);
+
+  border-radius: 10px;
+}
+
+.btn-go-to-landing {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.sub-label {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.sub-container {
+  height: 50%;
+  position: relative
+}
+
+.d-flex-end {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+}

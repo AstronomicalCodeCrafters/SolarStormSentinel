@@ -1,0 +1,127 @@
+<div class="footer">
+  <div>
+    <h4>Suscribete a nuestra Newsletter</h4>
+
+    <p class="font-body-1 line-height">
+      Recibe los mejores consejos, tendencias en diseño de uñas, novedades y ofertas. Y además...
+    </p>
+    <p class="font-sub-title-2"> ¡Un 15% de descuento en tu primera compra sin pedido mínimo!</p>
+
+    <input [ngModel]="email" placeholder="Introduce aquí tu e-mail" class="mt-3" />
+
+    <div class="mt-3 font-body-1 privacy-policy">
+      <input [ngModel]="privacyPolicy" type="checkbox" />
+      <label class="ml-2"> Acepto la <a class="color-brownDark">Politica de Privacidad.</a> </label>
+    </div>
+
+    <button class="btn btn-aquaDark btn-subscribe mt-3"> Suscribirme a la Newsletter </button>
+  </div>
+
+  <div class="mt-4 formula">
+    <div class="icon-formula">
+      <div>
+        <img src="../../../assets/icons/cruelty_free.svg" class="img-formula">
+      </div>
+      <label class="font-sub-title-1"> CRUELTY FREE </label>
+    </div>
+
+    <div class="icon-formula">
+      <div>
+        <img src="../../../assets/icons/Vector.svg" class="img-formula">
+      </div>
+      <label class="font-sub-title-1"> SIN TÓXICOS </label>
+    </div>
+
+    <div class="icon-formula">
+      <div>
+        <img src="../../../assets/icons/recycling.svg" class="img-formula">
+      </div>
+      <label class="font-sub-title-1"> SOSTENIBLE </label>
+    </div>
+
+    <div class="icon-formula">
+      <div>
+        <img src="../../../assets/icons/water_drop.svg" class="img-formula">
+      </div>
+      <label class="font-sub-title-1"> HIPOALERGÉNICO </label>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <label class="font-sub-title-1"> Contacto </label>
+
+    <div class="phone-number mt-3">
+      <fa-icon icon="phone"></fa-icon>
+      <label class="font-body-2"> {{phoneNumber}}</label>
+    </div>
+
+    <div class="phone-number mt-3">
+      <fa-icon icon="phone"></fa-icon>
+      <label class="font-body-2"> {{phoneNumberWhatsApp}}</label>
+    </div>
+
+    <button class="btn btn-aquaDark contact-us mt-3">Contáctanos</button>
+  </div>
+
+  <div class="mt-3">
+    <label class="font-sub-title-1">Redes sociales</label>
+
+    <div class="social-media-icons">
+      <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+      <fa-icon [icon]="['fab', 'facebook']" class="ml-3"></fa-icon>
+      <fa-icon [icon]="['fab', 'youtube']" class="ml-3"></fa-icon>
+    </div>
+  </div>
+
+  <div class="mt-3 formula">
+    <div class="simple-container">
+      <div class="w-1-2">
+        <div class="options-container mr-2">
+          <label class="font-body-1">Moneda</label>
+
+          <mdb-accordion class="select-dropdown" (click)="flag = false">
+            <mdb-accordion-item [collapsed]="flag">
+              <ng-template mdbAccordionItemHeader class="collapsed">
+                <div class="font-body-1 color-blackDark">
+                  {{ selectedCurrency.label }}
+                </div>
+              </ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div class="font-body-1 accordion-option color-blackDark" *ngFor="let currency of currencyOptions"
+                  (click)="selectedCurrency = currency; flag=!flag">
+                  {{ currency.label }}
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </mdb-accordion>
+        </div>
+      </div>
+
+      <div class="w-1-2">
+        <div class="options-container ml-2">
+          <label class="font-body-1">Idioma</label>
+
+          <mdb-accordion class="select-dropdown" (click)="flag2 = false">
+            <mdb-accordion-item [collapsed]="flag2">
+              <ng-template mdbAccordionItemHeader class="collapsed">
+                <div class="font-body-1 color-blackDark">
+                  {{ selectedLenguage.label }}
+                </div>
+              </ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div class="font-body-1 accordion-option color-blackDark" *ngFor="let lenguage of languageOptions"
+                  (click)="selectedLenguage = lenguage; flag2=!flag2">
+                  {{ lenguage.label }}
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </mdb-accordion>
+        </div>
+      </div>
+    </div>
+
+    <div class="img-credit-card-options mt-3">
+      <img src="../../../assets/images/credit-card-options.png" />
+    </div>
+  </div>
+</div>

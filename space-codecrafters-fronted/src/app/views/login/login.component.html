@@ -1,0 +1,32 @@
+<div class="main-container">
+  <div class="title-login">
+    <h4 class="color-brownDark"> Iniciar sesión </h4>
+  </div>
+
+
+  <div class="container">
+    <div class="row mt-3">
+      <label class="font-sub-title-2">Dirección de e-mail *</label>
+      <input [(ngModel)]="email" type="email" placeholder="E-mail" id="ngmEmail" name="ngmEmail" required
+        #ngmEmail="ngModel" />
+      <div *ngIf="ngmEmail.invalid && (ngmEmail.dirty || ngmEmail.touched)" class="validate-alert">
+        <div *ngIf="ngmEmail.errors?.['required']">
+          Email es requerido
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="font-sub-title-2">Contraseña *</label>
+      <input [(ngModel)]="password" type="password" placeholder="Introduce aquí tu contraseña" id="ngmPassword"
+        name="ngmPassword" required #ngmPassword="ngModel" (keyup.enter)="logIn()" />
+      <div *ngIf="ngmPassword.invalid && (ngmPassword.dirty || ngmPassword.touched)" class="validate-alert">
+        <div *ngIf="ngmPassword.errors?.['required']">
+          Contraseña es requerido
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="mt-5 btn btn-aquaDark btn-login" (click)="logIn()">Iniciar sesión</button>
+</div>

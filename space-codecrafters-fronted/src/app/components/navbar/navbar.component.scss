@@ -1,0 +1,98 @@
+.navbar, .container-fluid {
+  background-color: transparent !important;
+}
+
+fa-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+label {
+  margin-left: 5px;
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.sticky-top {
+  position: fixed;
+  left: 0rem;
+  top: 1rem;
+  //width: 100vw;
+}
+
+.navbar-without-banner {
+  top: 0;
+}
+
+.navbar-brand {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.navbar-brand label {
+  cursor: pointer;
+}
+
+.the-luxe-image {
+  width: 100px;
+}
+
+.menu-option {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-option label {
+  cursor: pointer;
+}
+
+.menu-width {
+  width: 65px;
+  padding-left: 5px;
+}
+
+.bag-shopping-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bag-shopping-icon .circle {
+  margin: 0;
+  right: 10px;
+  top: -2px;
+  width: 13px;
+  height: 13px;
+  min-height: 13px;
+  min-width: 13px;
+  position: relative;
+  background-color: var(--brownDark-color);
+}
+
+.font-weight {
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+
+  .navbar-brand,
+  .menu-option {
+    display: inline-grid;
+  }
+
+  .menu-width {
+    width: 30px;
+    padding-left: 5px;
+  }
+
+  label {
+    margin-left: 0;
+  }
+
+}

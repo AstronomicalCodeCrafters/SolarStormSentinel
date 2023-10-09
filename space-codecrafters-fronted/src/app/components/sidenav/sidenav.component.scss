@@ -1,0 +1,58 @@
+.sidenav {
+  top: 100px;
+  left: 0;
+  width: 0;
+  height: 90%;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--white-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align: left;
+  padding: 10px 0px 30px 0px;
+}
+
+.sidenav-width {
+  width: 100%;
+}
+
+.sidenav-without-banner {
+  top: 55px;
+  height: calc(100% - 55px);
+}
+
+.sidenav .side-nav-section {
+  padding: 0px 15px 18px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.font-weight {
+  font-weight: 300 !important;
+  padding: 4px 0;
+  cursor: pointer !important;
+}
+
+@media (min-width: 700px) {
+  .sidenav {
+    top: 79px;
+  }
+
+  .sidenav-width {
+    width: 300px;
+  }
+
+  .sidenav-without-banner {
+    top: 39px;
+    height: calc(100% - 39px);
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+}

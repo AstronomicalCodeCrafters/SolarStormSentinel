@@ -1,0 +1,71 @@
+<div class="main-container">
+  <div class="row justify-content-center">
+    <div class="div-bg"></div>
+    <div class="div-back" 
+      [routerLink]="['/predictions']" [queryParams]="{ startdate: lstartDate, enddate: lendDate }" 
+        >&lt;</div>
+    <div class="row row-img">
+      <div class="">
+        <div *ngIf="!isArray(item.images)" class="d-flex justify-content-center">
+          <div>
+            <img [src]="item.src" class="img-item">
+          </div>
+        </div>
+  
+        <div *ngIf="isArray(item.images)">
+          <carousel [isAnimated]="true">
+            <slide *ngFor="let image of item.images">
+              <div class="image-container">
+                <img [src]="image" class="img-item">
+                <span class="title-storm">{{name}}</span>
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L120,213.3C240,235,480,277,720,272C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+    <div class="info-div mt-4">
+      <tabset>
+        <tab heading="Information" id="tab1" class="col">
+          <!-- <p class="font-body-1">{{item.longDescription}}</p> -->
+
+          <h1 class="mt-3"><strong>Effect</strong></h1>
+          <ul class="mt-3">
+            <li>
+              <strong>HF Radio: </strong>{{actualInfoScale.effect[0]}}
+            </li>
+            <li>
+              <strong>Navigation: </strong>{{actualInfoScale.effect[1]}}
+            </li>
+          </ul>
+
+          <h1 class="mt-3"><strong>Average Frequency</strong></h1>
+          <p>{{actualInfoScale.average}}</p>
+          
+          <h1 class="mt-3"><strong>Preventive Recommendations</strong></h1>
+          <p>{{actualInfoScale.recommendation}}</p>
+
+          
+        </tab>
+        <tab heading="Prediction Dates" class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">K<sub>P</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dateItem of dateArray">
+                <th scope="row">{{dateItem[0]}}</th>
+                <td>{{dateItem[1]}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </tab>
+      </tabset>
+    </div>
+
+  </div>
